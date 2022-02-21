@@ -1,0 +1,10 @@
+/.idea
+/.history
+docker-compose.override.yml
+docker-compose.yml
+/docker
+/docker/nginx/conf/vhosts.conf
+/docker/nginx/logs/access.log
+/docker/nginx/logs/error.log
+/certbot
+.env
