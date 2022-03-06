@@ -18,14 +18,14 @@ class ChainAnalysisProvider extends ServiceProvider
     {
         $this->app->singleton(ChainAnalysisApi::class,function($app)
         {
-            $client = new Client(['base_uri' => 'https://api.chainalysis.com/api/kyt/v1/']);
+            $client = new Client(['base_uri' => 'MAIN_API_URL']);
             $headers = [
                 'headers'=> [
                     'Token' => env('CHAIN_ANALYSIS_API_KEY'),
                     'Accept' => 'application/json'
                 ],
             ];
-            
+
             return new ChainAnalysisApi($client,$headers);
         });
 
